@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="557.0" prefWidth="864.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="programtv.FXMLEditFormController">
+    <children>
+        <Button fx:id="btnSave" layoutX="613.0" layoutY="469.0" onAction="#handleButtonAction" text="Save" />
+        <Label fx:id="label" layoutX="155.0" layoutY="420.0" minHeight="16" minWidth="69" prefHeight="31.0" prefWidth="103.0" />
+      <Label layoutX="330.0" layoutY="34.0" prefHeight="39.0" prefWidth="269.0" text="Form Input Data TV" textAlignment="CENTER">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="287.0" layoutY="132.0" text="Kode_TV" textAlignment="RIGHT" />
+      <Label layoutX="260.0" layoutY="187.0" text="Nama Produk" textAlignment="RIGHT" />
+      <Label layoutX="236.0" layoutY="240.0" text="Tanggal Produksi" textAlignment="RIGHT" />
+      <Label layoutX="316.0" layoutY="294.0" text="Merk" textAlignment="RIGHT" />
+      <RadioButton fx:id="rdLG" layoutX="391.0" layoutY="294.0" mnemonicParsing="false" text="LG">
+         <toggleGroup>
+            <ToggleGroup fx:id="merk" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rdSony" layoutX="486.0" layoutY="294.0" mnemonicParsing="false" text="Sony" toggleGroup="$merk" />
+      <Label layoutX="306.0" layoutY="345.0" text="Ukuran" textAlignment="RIGHT" />
+      <TextField fx:id="kd_tv" layoutX="392.0" layoutY="127.0" promptText="Isi Kode" />
+      <TextField fx:id="tfNama" layoutX="393.0" layoutY="182.0" promptText="Nama Produk" />
+      <DatePicker fx:id="dpTanggalProduksi" layoutX="393.0" layoutY="235.0" prefHeight="31.0" prefWidth="187.0" promptText="Pilih Tanggal" />
+      <ComboBox fx:id="cbUkuran" layoutX="393.0" layoutY="340.0" prefHeight="31.0" prefWidth="187.0" promptText="Pilih Ukuran" />
+      <RadioButton fx:id="rdPanasonic" layoutX="585.0" layoutY="294.0" mnemonicParsing="false" text="Panasonic" toggleGroup="$merk" />
+      <Label layoutX="310.0" layoutY="401.0" text="Harga" textAlignment="RIGHT" />
+      <TextField fx:id="tfHarga" layoutX="393.0" layoutY="396.0" promptText="Harga Produk" />
+    </children>
+</AnchorPane>
