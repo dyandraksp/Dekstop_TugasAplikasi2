@@ -19,14 +19,16 @@ public class DBHandler {
         this.conn = DBHelper.getConnection(driver);
     }
     public void addTv(Tv t){
-        String insertTv = "INSERT INTO `produk`(`kd_tv`, `nama_produk`, `tgl_produksi`, `harga`)"
-                + "VALUES (?,?,?,?)";
+        String insertTv = "INSERT INTO `produk`(`kd_tv`, `nama_produk`, `tgl_produksi`, `harga`, `merk`, `ukuran`)"
+                + "VALUES (?,?,?,?,?,?)";
         try {
             PreparedStatement stmtInsert = conn.prepareStatement(insertTv);
             stmtInsert.setString(1, t.getKd_tv());
             stmtInsert.setString(2, t.getNama());
             stmtInsert.setString(3, t.getTglProduksi());
             stmtInsert.setString(4, t.getHarga());
+            stmtInsert.setString(5, t.getMerk());
+            stmtInsert.setString(6, t.getUkuran());
             stmtInsert.execute();
         } catch (SQLException ex) {
             Logger.getLogger(DBHandler.class.getName()).log(Level.SEVERE, null, ex);
